@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: #f9fafb;
 }
 
 .navbar {
@@ -40,6 +40,12 @@ body {
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(0, 0, 0, 0.7); /* Color del texto al pasar el mouse */
+}
+
+.main-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 100px; /* Añade margen inferior para el espacio del footer */
 }
 
 .carousel-item {
@@ -92,9 +98,7 @@ body {
     margin-left: 5px; /* Espacio entre el texto y el icono */
 }
 
-main.container {
-    padding-top: 2rem;
-}
+
 
 .text-center {
     text-align: center;
@@ -114,12 +118,12 @@ main.container {
 }
 
 .card.shadow-sm:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9);
     transform: translateY(-10px);
 }
 
 .card.shadow-sm {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .fa-twitter, .fa-envelope {
@@ -148,4 +152,21 @@ main.container {
 .mx-2 {
     margin-left: .5rem;
     margin-right: .5rem;
+}
+
+/* Smaller navbar for secondary pages */
+.secondary-navbar {
+    padding: 0.1rem 3rem; /* Reduce el padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.secondary-navbar .navbar-brand img {
+    width: 60px; /* Tamaño más pequeño del logo */
+    height: 60px; /* Tamaño más pequeño del logo */
+}
+
+/* Reduce font size for secondary navbar links */
+.secondary-navbar .nav-link {
+    font-size: 1rem; /* Tamaño de fuente reducido */
 }
