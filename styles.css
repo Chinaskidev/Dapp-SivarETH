@@ -273,6 +273,64 @@ body {
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
+/* Story section styles */
+.story-section {
+    background-image: url('static/img/flor.jpg'); /* Cambia a la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: white; /* Color del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.story-content {
+    max-width: 40%;
+    color: #4d3079; /* Color del texto, ajusta según necesites */
+    
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.story-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.story-date {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.story-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.story-images {
+    display: flex;
+    gap: 2rem; /* Espacio entre las imágenes */
+}
+
+.story-image {
+    max-width: 300px; /* Ajusta según necesites */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .highlight-section,
@@ -289,5 +347,19 @@ body {
     .highlight-section .content,
     .highlight-section-reverse .content {
         max-width: 100%;
+    }
+    
+    .story-section {
+        flex-direction: column;
+    }
+    
+    .story-content,
+    .story-images {
+        max-width: 100%;
+    }
+
+    .story-images {
+        flex-direction: column;
+        align-items: center;
     }
 }
