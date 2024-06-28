@@ -1,55 +1,60 @@
+/* Estilos generales */
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('static/img/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     line-height: 1.6;
     background-color: #f9fafb;
 }
 
 .navbar {
     transition: top 1s ease-in-out, background-color 1s, padding 1s;
-    position: fixed; /* Asegura que el menú se mantenga fijo */
-    width: 100%; /* Asegura que el menú cubra todo el ancho de la página */
-    z-index: 1000; /* Asegura que el menú esté siempre por encima de otros elementos */
+    position: fixed; 
+    width: 100%; 
+    z-index: 1000;
 }
 
 .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 0.5rem 1rem; /* Reduce el padding al hacer scroll */
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 0.5rem 1rem;
 }
 
 .navbar-brand img {
-    width: 90px;
-    height: 90px;
-    transition: width 1s, height 1s; /* Añade una transición suave */
+    width: 50px;
+    height: 50px;
+    transition: width 1s, height 1s;
 }
-
 .navbar-brand img.scrolled {
     width: 40px;
-    height: 40px; /* Reduce el tamaño del logo al hacer scroll */
+    height: 40px;
 }
 
 .navbar-nav .nav-link {
-    font-size: 1.1rem; /* Aumenta el tamaño de la fuente de los enlaces del menú */
+    font-size: 1.1rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.5); /* Color del texto */
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, 0.7); /* Color del texto al pasar el mouse */
+    color: rgba(119, 23, 128, 0.7);
 }
 
 .main-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-bottom: 100px; /* Añade margen inferior para el espacio del footer */
+    margin-bottom: 100px;
 }
 
 .carousel-item {
-    height: 90vh; /* Ajusta la altura del carrusel */
+    height: 90vh;
 }
 
 .carousel-item img {
@@ -66,20 +71,68 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Especifica el color del texto de cada slide */
-.carousel-item:nth-child(1) .carousel-caption h1,
-.carousel-item:nth-child(1) .carousel-caption a {
-    color: #0a0a0a; /* Color para el primer slide */
+.custom-btn {
+    border-radius: 30px;
+    border: 2px solid black;
+    background-color: rgba(128, 0, 128, 0.2);
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.carousel-item:nth-child(2) .carousel-caption h1,
-.carousel-item:nth-child(2) .carousel-caption a {
-    color: #080808; /* Color para el segundo slide */
+.my-button {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.carousel-item:nth-child(3) .carousel-caption h1,
-.carousel-item:nth-child(3) .carousel-caption a {
-    color: black; /* Color para el tercer slide */
+.custom-btn:hover {
+    background-color: rgba(128, 0, 128, 0.5);
+    color: white;
+    border: 2px solid black;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #5f3d92;
+    text-align: center; 
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #000;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 2px solid black;
+    background-color: rgba(128, 0, 128, 0.2);
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.learn-more-btn:hover {
+    background-color: rgba(128, 0, 128, 0.5);
+    color: white;
+    border: 2px solid black;
 }
 
 .custom-footer {
@@ -94,11 +147,9 @@ body {
 }
 
 .custom-footer .fa-heart {
-    color: red; /* Puedes ajustar el color del icono de corazón aquí */
-    margin-left: 5px; /* Espacio entre el texto y el icono */
+    color: red;
+    margin-left: 5px;
 }
-
-
 
 .text-center {
     text-align: center;
@@ -127,7 +178,7 @@ body {
 }
 
 .fa-twitter, .fa-envelope {
-    color: #3b5998; /* Puedes ajustar los colores de los iconos aquí */
+    color: #3b5998;
 }
 
 .fa-twitter:hover {
@@ -142,7 +193,7 @@ body {
     width: 32px;
     height: 32px;
     transition: transform 0.2s;
-    vertical-align: text-bottom; /* Asegura la alineación vertical */
+    vertical-align: text-bottom;
 }
 
 .custom-icon:hover {
@@ -156,17 +207,87 @@ body {
 
 /* Smaller navbar for secondary pages */
 .secondary-navbar {
-    padding: 0.1rem 3rem; /* Reduce el padding */
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 0.1rem 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .secondary-navbar .navbar-brand img {
-    width: 60px; /* Tamaño más pequeño del logo */
-    height: 60px; /* Tamaño más pequeño del logo */
+    width: 50px;
+    height: 50px;
 }
 
-/* Reduce font size for secondary navbar links */
 .secondary-navbar .nav-link {
-    font-size: 1rem; /* Tamaño de fuente reducido */
+    font-size: 1rem;
+}
+
+/* Highlight section styles */
+.highlight-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-section .content {
+    text-align: center;
+}
+
+.highlight-section .image {
+    max-width: 50%;
+}
+
+.highlight-section .image img {
+    max-width: 90%;
+    border-radius: 15px;
+}
+
+/* Reverse section */
+.highlight-section-reverse {
+    flex-direction: row;
+}
+
+/* Hover effect */
+.highlight-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* No button section */
+.highlight-section.no-button .content {
+    max-width: 100%;
+    text-align: center;
+}
+
+.highlight-section.no-button .image {
+    display: none;
+}
+
+.small-image {
+    max-width: 50%; /* Puedes ajustar este valor según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .highlight-section,
+    .highlight-section-reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .highlight-section .image,
+    .highlight-section-reverse .image {
+        margin-bottom: 1rem;
+    }
+    
+    .highlight-section .content,
+    .highlight-section-reverse .content {
+        max-width: 100%;
+    }
 }
