@@ -3,7 +3,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('static/img/background.jpg'); 
+    background-image: url('../img/background.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -275,7 +275,7 @@ body {
 
 /* Story section styles */
 .story-section {
-    background-image: url('static/img/flor.jpg'); /* Cambia a la ruta de tu imagen de fondo */
+    background-image: url('../img/flor.jpg'); /* Cambia a la ruta de tu imagen de fondo */
     background-size: cover;
     background-position: center;
     padding: 2rem;
@@ -288,11 +288,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .story-content {
     max-width: 40%;
     color: #4d3079; /* Color del texto, ajusta según necesites */
-    
     padding: 1rem;
     border-radius: 10px;
 }

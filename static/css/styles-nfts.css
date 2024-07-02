@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+}
+
+.navbar {
+    transition: top 1s ease-in-out, background-color 1s, padding 1s;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    transition: width 1s, height 1s;
+}
+.navbar-brand img.scrolled {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(119, 23, 128, 0.7);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #6f42c1 0%, #52057b 100%);
+    padding: 100px 0;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ff4081;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hero-img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #ff4081;
+    border-color: #ff4081;
+}
+
+.btn-primary:hover {
+    background-color: #e63950;
+    border-color: #e63950;
+}
+
+.nfts-section {
+    background-color: #200520;
+    padding: 60px 0;
+}
+
+.nfts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nft-img {
+    max-width: 350px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.nft-img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+}

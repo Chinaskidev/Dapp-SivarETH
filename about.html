@@ -6,10 +6,7 @@
     <title>Sobre Nosotros - Sivar Smile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-    </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="static/css/styles-about.css">
 </head>
 <body>
     <header>
@@ -32,54 +29,74 @@
         </nav>
     </header>
 
-    <main class="container mt-5 mb-5">
-        <section id="about" class="text-center"> <br>
-            <h1>Sobre Nosotros</h1>
-            <img src="static/img/handspurpler.png" alt="Logo" width="300" height="300">
-            <p class="text-justify">
-                El propósito de Sivar Smile es proporcionar ayuda a las personas de bajos recursos que enfrenten las dificultades de la epilepsia.
-                Nos enfocamos en ofrecer tratamientos dentales esenciales a aquellos que han perdido dientes a causa de convulsiones epilépticas.
-                Utilizando la tecnología Web 3 y la venta de NFTs exclusivos, recaudamos fondos que se destinan directamente a estos tratamientos.
-                Nuestro compromiso es asegurar que cada contribución tenga un impacto significativo, brindando esperanza y mejorando la calidad de vida de nuestros beneficiarios.
-                Trabajamos con transparencia y dedicación para transformar vidas, un diente a la vez.
-            </p>
-            <br>
-            
-            <ul class="list-unstyled text-left mx-auto">
-                <li><strong>&#8226; Visión:</strong> Ser un faro de esperanza y transformación para las personas con epilepsia en El Salvador, creando un sistema de apoyo sostenible y transparente que utilice las tecnologías emergentes para mejorar su calidad de vida y autoestima.</li>
-                <li><strong>&#8226; Misión:</strong> Financiar tratamientos dentales y proporcionar medicamentos esenciales mediante la venta de NFTs y la recepción de donaciones en criptomonedas, utilizando la transparencia y trazabilidad de la blockchain para asegurar que cada contribución se destine efectivamente a mejorar la vida de las personas con epilepsia.</li>
-            </ul>
+    <main>
+        <section class="parallax-section" id="intro">
+            <div class="container text-center"> <br> <br>
+                <h1 class="parallax-title"><span class="highlight">Sobre Nosotros</span></h1>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 fade-in">
+                        <img src="static/img/handspurpler.png" alt="Logo" class="img-fluid about-img">
+                    </div>
+                    <div class="col-md-6 fade-in">
+                        <p class="about-text">
+                            El propósito de Sivar Smile es proporcionar ayuda a personas con epilepsia que enfrentan dificultades para obtener medicamentos y
+                            tratamientos dentales esenciales. Nos enfocamos en ofrecer acceso a medicamentos
+                            anticonvulsivos, que a menudo son inaccesibles debido a su alto costo, y asistencia 
+                            dental a aquellos que han perdido dientes a causa de convulsiones epilépticas, 
+                            mejorando así su calidad de vida y bienestar. En Sivar Smile, aprovechamos 
+                            la tecnología Web 3 y la venta de NFTs exclusivos para recaudar fondos que se 
+                            destinan directamente a tratamientos necesarios. Nuestro compromiso es 
+                            garantizar que cada contribución tenga un impacto significativo, brindando esperanza
+                            y mejorando la calidad de vida de nuestros beneficiarios. Trabajamos con transparencia 
+                            y dedicación para transformar vidas, una medicina y un diente a la vez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 fade-in">
+                        <h3 class="about-title">&#8226; Visión</h3>
+                        <p class="about-text">
+                            Ser un faro de esperanza y transformación para las personas con epilepsia en El Salvador.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="static/img/ayudaabout.png" alt="Visión" class="img-fluid about-img offset-right vision-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 fade-in">
+                        <img src="static/img/aboutnft.png" alt="Misión" class="img-fluid about-img offset-left mission-img">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="about-title fade-in">&#8226; Misión</h3>
+                        <p class="about-text">
+                            Financiar tratamientos dentales y proporcionar medicamentos esenciales mediante la venta de NFTs y la recepción de donaciones en criptomonedas, utilizando la transparencia y trazabilidad de la blockchain para asegurar que cada contribución se destine efectivamente a mejorar la vida de las personas con epilepsia.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     
-    <footer class="custom-footer text-white text-center py-3">
-        <p>&copy; 2024 Sivar Smile. Todos los derechos reservados. <i class="fa-solid fa-heart"></i></p>
-    </footer>
-
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var lastScrollTop = 0;
-            $(window).scroll(function () {
-                var currentScrollTop = $(this).scrollTop();
-                if (currentScrollTop > lastScrollTop) {
-                    $('.navbar').css('top', '-100px');
-                } else {
-                    $('.navbar').css('top', '0px');
-                }
-                lastScrollTop = currentScrollTop;
-
-                if (currentScrollTop > 50) {
-                    $('.navbar').addClass('scrolled');
-                    $('.navbar-brand img').addClass('scrolled');
-                } else {
-                    $('.navbar').removeClass('scrolled');
-                    $('.navbar-brand img').removeClass('scrolled');
-                }
-            });
-        });
-    </script>
+    <script src="static/js/script_about.js"></script>
 </body>
 </html>
