@@ -35,9 +35,11 @@ body {
     height: 40px;
 }
 
-.navbar-nav .nav-link {
-    font-size: 1.1rem;
+.navbar-nav .nav-item .nav-link img {
+    margin-left: 10px; /* Ajusta según sea necesario */
+    margin-right: 10px; /* Ajusta según sea necesario */
 }
+
 
 .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.5);
