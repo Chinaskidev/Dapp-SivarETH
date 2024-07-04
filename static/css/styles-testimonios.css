@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     background-color: #f8f9fa;
     padding-top: 80px;
 }
@@ -49,7 +49,24 @@ body {
     margin-bottom: 10px;
 }
 
+.btn-primary {
+    background-color: #cec1e2;
+    border-color: #121213;
+    color: #141414;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #8a5ab6;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 .row .col-md-4 {
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
