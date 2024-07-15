@@ -78,8 +78,17 @@ body {
 }
 
 .nfts-section {
-    background-color: #200520;
+    background-color: #8f57e7;
     padding: 60px 0;
+}
+
+.nfts-section p {
+    text-align: justify;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fffefe;
 }
 
 .nfts-container {
@@ -99,9 +108,8 @@ body {
 
 .nft-img:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
-
 
 @media (max-width: 768px) {
     .hero-title {
