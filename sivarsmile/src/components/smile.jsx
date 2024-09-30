@@ -12,7 +12,6 @@ const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta la sombra inferior */
 
    
     .logo {
@@ -45,6 +44,8 @@ const NavLinks = styled(Nav.Link)`
     &:hover {
         color: #FF5733;
         background-color: #654840;
+        border-radius: 100px;
+        
     }
 `;
 
