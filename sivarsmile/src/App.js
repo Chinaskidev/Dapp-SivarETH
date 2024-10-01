@@ -3,7 +3,7 @@ import { ResponsiveNavbar, MainContent } from './components/smile';
 
 function App() {
     return (
-        <div>
+        <div style={{ padding: '2rem',background: '#f0f0f0'}}>
             <ResponsiveNavbar />
             <MainContent />
         </div>
