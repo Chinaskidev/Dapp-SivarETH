@@ -1,0 +1,51 @@
+/* styles.css */
+
+
+/* estilo de la carta sola */
+.card-custom-sivareth.shadow-only {
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    transition: none;
+    display: inline-block  ;
+    margin-top: 10rem;
+    align-items: center;
+    margin-left: 10rem;
+
+}    
+
+.card-custom.shadow-only:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-custom img{
+    display: block;
+    width: 400%;
+    height: auto;
+
+}
+
+.card-custom-sivarethcard{
+    align-items: center;
+    
+
+}
+
+
+/* Estilo para las tarjetas */
+.card-custom {
+    border-radius: 20px; /* Bordes redondeados */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para efectos */
+    margin-top: 10rem; /* Espaciado superior */
+}
+
+/* Efecto hover para las tarjetas */
+.card-custom:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+
+}
+
+/* Estilo para la tipografía */
+.card-text-custom {
+    font-family: 'Ubuntu', sans-serif; /* Cambia la tipografía */
+    font-size: 2rem;
+    color: #333;
+}
