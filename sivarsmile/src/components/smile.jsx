@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Card, Button, Row, Col } from 'react-bootstrap';
+import './styles.css';
 
 
 
@@ -134,6 +135,7 @@ const ResponsiveNavbar = () => {
 
 const MainContent = () => {
     return (
+<<<<<<< Updated upstream
         <MainSection>
             <FlexContainer>
                 <Logo src="/volcanoweb.png" alt="Logo 1" />
@@ -152,7 +154,40 @@ const MainContent = () => {
                 <ButtonMint>MINT NOW!</ButtonMint>
             </div>
         </MainSection>
+=======
+        <Container style={{ padding: '2rem'}}>
+            <Row className="mb-4">
+                <Col>
+                    <Card className="card-custom-sivareth shadow-only align-items-center">
+                        <Card.Body className='card-custom-sivarethcard'>
+                            <img src="/sivareth2.png" alt="Logo Sivar" style={{ width: '700px', height: 'auto' }} />
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+            <Row className="mb-4">
+                <Col>
+                    <Card className="card-custom">
+                        <Card.Body>
+                            <Row className="align-items-center">
+                                <Col xs="auto">
+                                    <Card.Img src="/letrasivarweb2.png" style={{ width: '400px', height: 'auto' }} />
+                                </Col>
+                                <Col>
+                                    <Card.Text className='card-text-custom'>
+                                        fortalece a quienes generan cambio a través de donaciones 
+                                        en criptomonedas, creando un impacto positivo donde más se necesita.
+                                    </Card.Text>
+                                </Col>
+                            </Row>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+            
+        </Container>
+>>>>>>> Stashed changes
     );
 };
-
-export { ResponsiveNavbar, MainContent };
+        
+export  {ResponsiveNavbar, MainContent};
