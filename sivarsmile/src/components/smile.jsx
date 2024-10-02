@@ -135,26 +135,6 @@ const ResponsiveNavbar = () => {
 
 const MainContent = () => {
     return (
-<<<<<<< Updated upstream
-        <MainSection>
-            <FlexContainer>
-                <Logo src="/volcanoweb.png" alt="Logo 1" />
-                <Text>Texto al lado del primer logo</Text>
-            </FlexContainer>
-            <FlexContainer>
-                <Logo src="/aboutnft.png" alt="Logo 2" />
-                <Text>Texto al lado del segundo logo</Text>
-            </FlexContainer>
-            <FlexContainer>
-                <Logo src="/ayudaabout.png" alt="Logo 3" />
-                <Text>Texto al lado del tercer logo</Text>
-            </FlexContainer>
-            <div>
-                <Logo src="/letrasivarweb2.png" alt="Mint Logo" />
-                <ButtonMint>MINT NOW!</ButtonMint>
-            </div>
-        </MainSection>
-=======
         <Container style={{ padding: '2rem'}}>
             <Row className="mb-4">
                 <Col>
@@ -184,10 +164,8 @@ const MainContent = () => {
                     </Card>
                 </Col>
             </Row>
-            
         </Container>
->>>>>>> Stashed changes
     );
 };
         
-export  {ResponsiveNavbar, MainContent};
+export { ResponsiveNavbar, MainContent };
