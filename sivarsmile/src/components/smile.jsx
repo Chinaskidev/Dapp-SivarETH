@@ -59,7 +59,22 @@ const MainSection = styled.section`
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    
 `;
+
+const BackgroundContainer = styled.div`
+
+
+    background-image: url('/backgroend .png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Asegura que cubra toda la altura de la ventana */
+    padding: 2rem; /* Ajusta el padding según sea necesario */
+`;
+
+
+
 
 const FlexContainer = styled.div`
     display: flex;
@@ -96,7 +111,8 @@ const ButtonMint = styled.button`
     border-radius: 10px;
     cursor: pointer;
     &:hover {
-        background-color: #C70039;
+    background-color: #C70039;
+    align-items: right;
     }
 `;
 
@@ -135,37 +151,57 @@ const ResponsiveNavbar = () => {
 
 const MainContent = () => {
     return (
-        <Container style={{ padding: '2rem'}}>
-            <Row className="mb-4">
-                <Col>
-                    <Card className="card-custom-sivareth shadow-only align-items-center">
-                        <Card.Body className='card-custom-sivarethcard'>
-                            <img src="/sivareth2.png" alt="Logo Sivar" style={{ width: '700px', height: 'auto' }} />
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Row className="mb-4">
-                <Col>
-                    <Card className="card-custom">
-                        <Card.Body>
-                            <Row className="align-items-center">
-                                <Col xs="auto">
-                                    <Card.Img src="/letrasivarweb2.png" style={{ width: '400px', height: 'auto' }} />
-                                </Col>
-                                <Col>
-                                    <Card.Text className='card-text-custom'>
-                                        fortalece a quienes generan cambio a través de donaciones 
-                                        en criptomonedas, creando un impacto positivo donde más se necesita.
-                                    </Card.Text>
-                                </Col>
-                            </Row>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+        <BackgroundContainer>
+            <Container style={{ padding: '2rem' }}>
+                <Row className="mb-4">
+                    <Col>
+                        <Card className="card-custom-sivareth shadow-only align-items-center">
+                            <Card.Body className='card-custom-sivarethcard'>
+                                <img src="/sivareth2.png" alt="Logo Sivar" style={{ width: '700px', height: 'auto' }} />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row className="mb-4">
+                    <Col>
+                        <Card className="card-custom">
+                            <Card.Body>
+                                <Row className="align-items-center">
+                                    <Col xs="auto">
+                                        <Card.Img src="/letrasivarweb2.png" style={{ width: '400px', height: 'auto' }} />
+                                    </Col>
+                                    <Col>
+                                        <Card.Text className='card-text-custom'>
+                                            fortalece a quienes generan cambio a través de donaciones 
+                                            en criptomonedas, creando un impacto positivo donde más se necesita.
+                                        </Card.Text>
+                                    </Col>
+                                </Row>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row className="mb-4">
+                    <Col>
+                        <Card>
+                            <Card.Body>
+                                <Row className="align-items-center justify-content-center">
+                                    <Col xs="auto">
+                                        <Card.Img src="/unnamed.png" style={{ width: '900px', height: 'auto' }} />
+                                    </Col>
+                                    <Col xs="auto">
+                                        <Button className="mint-button">
+                                            MINT NOW!
+                                        </Button>
+                                    </Col>
+                                </Row>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        </BackgroundContainer>
     );
 };
-        
+
 export { ResponsiveNavbar, MainContent };

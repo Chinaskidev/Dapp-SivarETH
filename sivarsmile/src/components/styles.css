@@ -49,3 +49,19 @@
     font-size: 2rem;
     color: #333;
 }
+
+/* style.css */
+.mint-button {
+    background-color: #FF5733;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mint-button:hover {
+    background-color: #FF4500;
+}
