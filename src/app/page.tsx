@@ -3,14 +3,17 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wallet, Star, Shield, Zap, ChevronLeft, ChevronRight } from "lucide-react"
-import { ConnectButton, useReadContract } from 'thirdweb/react';
+import { Wallet, Star, Shield, Zap, ChevronLeft, ChevronRight, Contact } from "lucide-react"
+import { ConnectButton, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
 import { client } from "./client";
-import { getContract } from 'thirdweb';
+import { getContract } from "thirdweb";
 import { base } from "thirdweb/chains";
-import { getContractMetadata } from 'thirdweb/extensions/common';
+import { getContractMetadata } from "thirdweb/extensions/common";
+import { claimTo } from "thirdweb/extensions/erc721";
 
 export default function NFTClaimLandingPage() {
+const account = useActiveAccount();
+
   const contract= getContract({
     client: client,
     chain: base,
@@ -64,11 +67,11 @@ export default function NFTClaimLandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 text-gray-900">
       <nav className="bg-white/80 backdrop-blur-sm shadow-md">
-        <div className="container mx-auto max-w-6xl px-1">
+        <div className="container mx-auto max-w-6x2 px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center -ml-4">
               <Image
-                src="/otrologo2sivar.png"
+                src="/logosivareth.png"
                 alt="NFT Claim Logo"
                 width={90}
                 height={90}
@@ -89,29 +92,55 @@ export default function NFTClaimLandingPage() {
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/sivareth2.png"
+              src="/ethvolcano.png"
               alt="Featured NFT"
               width={400}
               height={400}
               className="rounded-lg shadow-2xl"
             />
+         
+
+            {/*<MediaRenderer
+              client={client}
+              src={contractMetadata?.image}
+              width="400"
+              height="400"
+              style={{
+                borderRadius: '3rem',
+                border: '1px solid #e2e8f0',
+                boxShadow: '0px 1px 2px 0px rgba(16, 24, 40, 0.06)',
+              }}
+            />*/}
+
           </div>
 
-          <div className="w-full md:w-1/2 space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold">{contractMetadata?.name}</h1>
-            <p className="text-xl text-gray-700">
-              Don't miss out on this unique opportunity to own a piece of digital history.
+          <div className="w-full md:w-1/2 bg-white/90 backdrop-blur-sm rounded-lg p-6 space-y-4">
+            <h1 className="text-4xl md:text-6xl font-bold">Sivar Volcanoes</h1>
+            <p className="text-xl text-gray-900">
+              Claim your volcano and join the SivarETH community.
+              
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white">
+            {/*<Button size="lg" className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white">
               Claim NFT
-            </Button>
+            </Button>*/}
+
+            <TransactionButton 
+              transaction={() => claimTo({
+                contract: contract,
+                to: account?.address as string,
+                quantity: BigInt(1),
+              })}
+              onTransactionConfirmed={async () => alert("Transaction Confirmed")}
+            >
+              Claim your Volcano
+            </TransactionButton>
           </div>
         </section>
 
         <section className="mb-16 flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
             <Image
-              src="/letrasivarweb2.png"
+              src="/letrasennegro.png"
               alt="NFT Collection"
               width={400}
               height={300}
