@@ -116,7 +116,7 @@ const account = useActiveAccount();
 
           <div className="w-full md:w-1/2 bg-white/90 backdrop-blur-sm rounded-lg p-6 space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold">Sivar Volcanoes</h1>
-            <p className="text-xl text-gray-900">
+            <p className="text-xl text-black-900">
               Claim your volcano and join the SivarETH community.
               
             </p>
@@ -129,10 +129,14 @@ const account = useActiveAccount();
                 contract: contract,
                 to: account?.address as string,
                 quantity: BigInt(1),
+                
               })}
               onTransactionConfirmed={async () => alert("Transaction Confirmed")}
+              className="bg-blue-600 hover:bg-blue-700 text-blue font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 border-4 border-black-300 hover:border-blue-200 shadow-lg"
+              
             >
-              Claim your Volcano
+              <span className="text-black-900 font-extrabold text-lg tracking-wide drop-shadow-md">Claim your Volcano</span>
+              
             </TransactionButton>
           </div>
         </section>
@@ -148,7 +152,7 @@ const account = useActiveAccount();
             />
           </div>
           <div className="w-full md:w-1/2 bg-white/80 backdrop-blur-sm rounded-lg p-6 space-y-4">
-            <h2 className="text-3xl font-semibold">About SivarETH</h2>
+            <h2 className="text-3xl font-semibold">SivarETH</h2>
             <p className="text-gray-700">
              We're harnessing the power of Web3 and NFTs to raise funds that directly create 
              a positive impact on individuals and local communities. These exclusive NFTs are part of a limited collection featuring unique 
