@@ -65,9 +65,9 @@ const account = useActiveAccount();
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-400 to-orange-400 bg-fixed" 
-     style={{backgroundImage: "url('/backgroeundweb.png')", backgroundBlendMode: "overlay"}}>
-      <nav className="bg-white/80 backdrop-blur-sm shadow-md">
+    <div className="min-h-screen bg-gradient-to-br from-blue-300 via-grey-400 to-orange-400 bg-fixed" 
+     style={{backgroundImage: "url('/backgroeundweb.png')", backgroundBlendMode: "normal"}}>
+      <nav className="bg-fuchsia-100/100 backdrop-blur-sm shadow-md">
         <div className="container mx-auto max-w-6x2 px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center -ml-4">
@@ -85,17 +85,24 @@ const account = useActiveAccount();
             <ConnectButton client={client} 
              connectButton={{ label: "Start",}}
              theme={{
-              colors:{
-                primaryButtonBg: "#67a3b5",
-                primaryButtonText: "#FFFFFF",
-                secondaryButtonBg: "#1F2937",
+              colors: {
+                primaryButtonBg: "#f9fcf5",
+                primaryButtonText: "#0a0a0a",
+                secondaryButtonBg: "#67a3b5",
                 secondaryButtonText: "#FFFFFF",
-                accentButtonText: "#4F46E5",
+                accentButtonText: "#1c2630",
+                modalBg: "#45535e",  // Set a solid background color for the modal
+                modalText: "#e8e6f2",  // Set the text color for the modal
+                modalBorder: "#1c2630",  // Set a border color for the modal
               },
               radii: {
                 connectButton: "0.5rem",
+                modal: "1rem",  // Add rounded corners to the modal
               },
-             }} 
+              shadows: {
+                modal: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",  // Add a shadow to the modal
+              },
+            }}
              />
              
 
@@ -129,7 +136,7 @@ const account = useActiveAccount();
 
           </div>
 
-          <div className="w-full md:w-1/2 bg-white/90 backdrop-blur-sm rounded-lg p-6 space-y-4">
+          <div className="w-full md:w-1/2 bg-white/70 backdrop-blur-sm rounded-lg p-6 space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold">Sivar Volcanoes</h1>
             <p className="text-xl text-black-900">
               Claim your volcano and join the SivarETH community.
@@ -147,7 +154,7 @@ const account = useActiveAccount();
                 
               })}
               onTransactionConfirmed={async () => alert("Transaction Confirmed")}
-              className="bg-blue-600 hover:bg-blue-700 text-blue font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 border-4 border-black-300 hover:border-blue-200 shadow-lg"
+              className="bg-blue-900 hover:bg-violet-700 text-dark font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 border-4 border-black-300 hover:border-blue-200 shadow-lg"
               
             >
               <span className="text-black-900 font-extrabold text-lg tracking-wide drop-shadow-md">Claim your Volcano</span>
