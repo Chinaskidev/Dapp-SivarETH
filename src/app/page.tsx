@@ -65,7 +65,8 @@ const account = useActiveAccount();
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 text-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-400 to-orange-400 bg-fixed" 
+     style={{backgroundImage: "url('/backgroeundweb.png')", backgroundBlendMode: "overlay"}}>
       <nav className="bg-white/80 backdrop-blur-sm shadow-md">
         <div className="container mx-auto max-w-6x2 px-2">
           <div className="flex justify-between items-center">
@@ -82,7 +83,21 @@ const account = useActiveAccount();
               <Wallet className="mr-2 h-4 w-4" /> Connect Wallet
             </Button>*/}
             <ConnectButton client={client} 
-             connectButton={{ label: "Start",}} />
+             connectButton={{ label: "Start",}}
+             theme={{
+              colors:{
+                primaryButtonBg: "#67a3b5",
+                primaryButtonText: "#FFFFFF",
+                secondaryButtonBg: "#1F2937",
+                secondaryButtonText: "#FFFFFF",
+                accentButtonText: "#4F46E5",
+              },
+              radii: {
+                connectButton: "0.5rem",
+              },
+             }} 
+             />
+             
 
           </div>
         </div>
