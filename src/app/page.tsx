@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wallet, Star, Shield, Zap, ChevronLeft, ChevronRight, Contact } from "lucide-react"
-import { ConnectButton, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
+import { Wallet, Star, Shield, Zap, ChevronLeft, ChevronRight, Contact, Ligature } from "lucide-react"
+import { ConnectButton, darkTheme, lightTheme, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
 import { client } from "./client";
 import { getContract } from "thirdweb";
 import { base } from "thirdweb/chains";
 import { getContractMetadata } from "thirdweb/extensions/common";
 import { claimTo } from "thirdweb/extensions/erc721";
+import { Warning } from 'postcss';
 
 export default function NFTClaimLandingPage() {
 const account = useActiveAccount();
@@ -82,28 +83,12 @@ const account = useActiveAccount();
             {/*<Button variant="outline" className="bg-gray-200 hover:bg-gray-300 text-gray-900 border-gray-300">
               <Wallet className="mr-2 h-4 w-4" /> Connect Wallet
             </Button>*/}
-            <ConnectButton client={client} 
-             connectButton={{ label: "Start",}}
-             theme={{
-              colors: {
-                primaryButtonBg: "#f9fcf5",
-                primaryButtonText: "#0a0a0a",
-                secondaryButtonBg: "#67a3b5",
-                secondaryButtonText: "#FFFFFF",
-                accentButtonText: "#1c2630",
-                modalBg: "#45535e",  // Set a solid background color for the modal
-                modalText: "#e8e6f2",  // Set the text color for the modal
-                modalBorder: "#1c2630",  // Set a border color for the modal
-              },
-              radii: {
-                connectButton: "0.5rem",
-                modal: "1rem",  // Add rounded corners to the modal
-              },
-              shadows: {
-                modal: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",  // Add a shadow to the modal
-              },
-            }}
-             />
+            <ConnectButton 
+              client={client}
+              connectButton={{ label: "Start" }}
+              theme={lightTheme()}
+                
+            />
              
 
           </div>
