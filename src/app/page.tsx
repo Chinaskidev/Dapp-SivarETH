@@ -10,7 +10,7 @@ import { getContract } from "thirdweb";
 import { base } from "thirdweb/chains";
 import { getContractMetadata } from "thirdweb/extensions/common";
 import { claimTo } from "thirdweb/extensions/erc721";
-import { Warning } from 'postcss';
+import Link from 'next/link';
 
 export default function NFTClaimLandingPage() {
 const account = useActiveAccount();
@@ -69,31 +69,41 @@ const account = useActiveAccount();
     <div className="min-h-screen bg-gradient-to-br from-blue-300 via-grey-400 to-orange-400 bg-fixed" 
      style={{backgroundImage: "url('/backgroeundweb.png')", backgroundBlendMode: "normal"}}>
       <nav className="bg-fuchsia-100/100 backdrop-blur-sm shadow-md">
-        <div className="container mx-auto max-w-6x2 px-2">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center -ml-4">
-              <Image
-                src="/logosivareth.png"
-                alt="NFT Claim Logo"
-                width={90}
-                height={90}
-                className="rounded-full navbar-image"
-              />
-            </div>
-            {/*<Button variant="outline" className="bg-gray-200 hover:bg-gray-300 text-gray-900 border-gray-300">
-              <Wallet className="mr-2 h-4 w-4" /> Connect Wallet
-            </Button>*/}
-            <ConnectButton 
-              client={client}
-              connectButton={{ label: "Start" }}
-              theme={lightTheme()}
-                
-            />
-             
+  <div className="container mx-auto max-w-6xl px-1">
+    <div className="flex justify-between items-center">
+      <div className="flex items-center -ml-20">
+        <Image
+          src="/letrasennegro.png"
+          alt="NFT Claim Logo"
+          width={60}
+          height={60}
+          className="rounded-full navbar-image"
+        />
+      </div>
 
-          </div>
-        </div>
-      </nav>
+      <div className="flex items-baseline space-x-6 -ml-96">
+        <Link href="/" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium hover:border hover:border-black-600 hover:bg-purple-200">
+          Home
+        </Link>
+        <Link href="/docs" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium  hover:border hover:border-black-600 hover:bg-purple-200">
+          Docs
+        </Link>
+        <Link href="/contact" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium  hover:border hover:border-black-600 hover:bg-purple-200">
+          Contact
+        </Link>
+      </div>
+
+      <div className="flex items-center">
+        <ConnectButton 
+          client={client}
+          connectButton={{ label: "Start" }}
+          theme={lightTheme()}
+        />
+      </div>  
+    </div>
+  </div>
+</nav>
+
 
       <main className="container mx-auto px-4 py-8 max-w-6xl">
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
@@ -106,20 +116,7 @@ const account = useActiveAccount();
               className="rounded-lg shadow-2xl"
             />
          
-
-            {/*<MediaRenderer
-              client={client}
-              src={contractMetadata?.image}
-              width="400"
-              height="400"
-              style={{
-                borderRadius: '3rem',
-                border: '1px solid #e2e8f0',
-                boxShadow: '0px 1px 2px 0px rgba(16, 24, 40, 0.06)',
-              }}
-            />*/}
-
-          </div>
+            </div>
 
           <div className="w-full md:w-1/2 bg-white/70 backdrop-blur-sm rounded-lg p-6 space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold">Sivar Volcanoes</h1>
