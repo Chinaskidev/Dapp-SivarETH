@@ -3,16 +3,14 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Star, Shield, Zap, ChevronLeft, ChevronRight} from "lucide-react"
-import { ConnectButton, lightTheme, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
+import { Wallet, Star, Shield, Zap, ChevronLeft, ChevronRight, Contact, Ligature } from "lucide-react"
+import { ConnectButton, darkTheme, lightTheme, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
 import { client } from "./client";
 import { getContract } from "thirdweb";
 import { base } from "thirdweb/chains";
 import { getContractMetadata } from "thirdweb/extensions/common";
 import { claimTo } from "thirdweb/extensions/erc721";
 import Link from 'next/link';
-
-
 
 export default function NFTClaimLandingPage() {
 const account = useActiveAccount();
@@ -84,16 +82,16 @@ const account = useActiveAccount();
       </div>
 
       <div className="flex items-baseline space-x-6 -ml-96">
-            <Link href="/page" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium hover:border hover:border-black-600 hover:bg-purple-200">
-              Home
-            </Link>
-            <Link href="/docs" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium hover:border hover:border-black-600 hover:bg-purple-200">
-              Docs
-            </Link>
-            <Link href="/contact" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium hover:border hover:border-black-600 hover:bg-purple-200">
-              Contact
-            </Link>
-          </div>
+        <Link href="/" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium hover:border hover:border-black-600 hover:bg-purple-200">
+          Home
+        </Link>
+        <Link href="/docs" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium  hover:border hover:border-black-600 hover:bg-purple-200">
+          Docs
+        </Link>
+        <Link href="/contact" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium  hover:border hover:border-black-600 hover:bg-purple-200">
+          Contact
+        </Link>
+      </div>
 
       <div className="flex items-center">
         <ConnectButton 
