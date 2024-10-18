@@ -3,24 +3,26 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wallet, Star, Shield, Zap, ChevronLeft, ChevronRight, Contact, Ligature } from "lucide-react"
-import { ConnectButton, darkTheme, lightTheme, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
-import { client } from "./client";
+import { Star, Shield, Zap, ChevronLeft, ChevronRight} from "lucide-react"
+import { ConnectButton, lightTheme, TransactionButton, useActiveAccount, useReadContract } from 'thirdweb/react';
+import { client } from "../app/client";
 import { getContract } from "thirdweb";
 import { base } from "thirdweb/chains";
 import { getContractMetadata } from "thirdweb/extensions/common";
 import { claimTo } from "thirdweb/extensions/erc721";
 import Link from 'next/link';
+import Navbar from '../components/Navbar'
 
 export default function NFTClaimLandingPage() {
-const account = useActiveAccount();
+  // Your existing component code here
+  const account = useActiveAccount();
 
-  const contract= getContract({
+  const contract = getContract({
     client: client,
     chain: base,
     address: process.env.NEXT_PUBLIC_NFT_CONTRACT_ADDRESS as string,
-
   });
+
   const { data: contractMetadata } = useReadContract(
     getContractMetadata,
     {
@@ -28,7 +30,6 @@ const account = useActiveAccount();
     }
   );
   console.log(contractMetadata);
-
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -68,44 +69,9 @@ const account = useActiveAccount();
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-300 via-grey-400 to-orange-400 bg-fixed" 
      style={{backgroundImage: "url('/backgroeundweb.png')", backgroundBlendMode: "normal"}}>
-      <nav className="bg-fuchsia-100/100 backdrop-blur-sm shadow-md">
-  <div className="container mx-auto max-w-6xl px-1">
-    <div className="flex justify-between items-center">
-      <div className="flex items-center -ml-20">
-        <Image
-          src="/letrasennegro.png"
-          alt="NFT Claim Logo"
-          width={60}
-          height={60}
-          className="rounded-full navbar-image"
-        />
-      </div>
-
-      <div className="flex items-baseline space-x-6 -ml-96">
-        <Link href="/" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium hover:border hover:border-black-600 hover:bg-purple-200">
-          Home
-        </Link>
-        <Link href="/docs" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium  hover:border hover:border-black-600 hover:bg-purple-200">
-          Docs
-        </Link>
-        <Link href="/contact" className="text-black-800 hover:text-gray-600 px-8 py-4 rounded-md text-sm font-medium  hover:border hover:border-black-600 hover:bg-purple-200">
-          Contact
-        </Link>
-      </div>
-
-      <div className="flex items-center">
-        <ConnectButton 
-          client={client}
-          connectButton={{ label: "Start" }}
-          theme={lightTheme()}
-        />
-      </div>  
-    </div>
-  </div>
-</nav>
-
-
+      <Navbar />
       <main className="container mx-auto px-4 py-8 max-w-6xl">
+        {/* Your existing main content here */}
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
           <div className="w-full md:w-1/2">
             <Image
@@ -115,32 +81,23 @@ const account = useActiveAccount();
               height={400}
               className="rounded-lg shadow-2xl"
             />
-         
-            </div>
+          </div>
 
           <div className="w-full md:w-1/2 bg-white/70 backdrop-blur-sm rounded-lg p-6 space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold">Sivar Volcanoes</h1>
             <p className="text-xl text-black-900">
               Claim your volcano and join the SivarETH community.
-              
             </p>
-            {/*<Button size="lg" className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white">
-              Claim NFT
-            </Button>*/}
-
             <TransactionButton 
               transaction={() => claimTo({
                 contract: contract,
                 to: account?.address as string,
                 quantity: BigInt(1),
-                
               })}
               onTransactionConfirmed={async () => alert("Transaction Confirmed")}
               className="bg-blue-900 hover:bg-violet-700 text-dark font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 border-4 border-black-300 hover:border-blue-200 shadow-lg"
-              
             >
               <span className="text-black-900 font-extrabold text-lg tracking-wide drop-shadow-md">Claim your Volcano</span>
-              
             </TransactionButton>
           </div>
         </section>
