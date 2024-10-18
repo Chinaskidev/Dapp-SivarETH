@@ -36,3 +36,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# image
+/public/backgroeundweb.png
+/public/boqueron.png
+/public/izalco.jpg
+/public/miguel.png
+/public/santaana.jpg
+/public/vicente.png
+/public/ethvolcano.png
+/public/letrasennegro.png
