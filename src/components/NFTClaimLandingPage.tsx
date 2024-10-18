@@ -35,19 +35,19 @@ export default function NFTClaimLandingPage() {
 
   const carouselItems = [
     {
-      image: "/sivar_moster_degen 01.png",
-      title: "Creator: Digital Visionary",
-      description: "Digital Visionary is a renowned artist in the NFT space, known for creating immersive and thought-provoking digital experiences. With a background in both traditional art and blockchain technology, their work pushes the boundaries of what's possible in the world of digital ownership."
+      image: "/santaana.jpg",
+      title: "Ana",
+      description: "Ilamatepec, or as the locals call it, Santa Ana, is not only the tallest volcano in El Salvador, but it’s also the Queen of heights, reaching an impressive 2,381 metres! And what makes it even more epic? Inside its active crater lies a stunning turquoise lagoon that looks as if it’s been pulled straight from a dream. A natural wonder that combines height, adventure, and beauty all in one place!"
     },
     {
-      image: "/sivar_moster_degen 02.png",
-      title: "Creator: Blockchain Picasso",
-      description: "Blockchain Picasso brings a unique perspective to the NFT world, blending traditional artistic techniques with cutting-edge blockchain technology. Their creations are not just visually stunning but also push the boundaries of what's possible in the realm of digital ownership."
+      image: "/izalco.jpg",
+      title: "Izalco",
+      description: "This Blockchain Lighthouse of the Pacific due to its constant activity in the 19th and 20th centuries, this young volcano is located in the Apaneca Range, near Santa Ana Volcano. Although currently inactive, it was once one of the most active volcanoes in Central America, with almost continuous eruptions until 1958. It is famous for its perfectly conical shape and the surrounding lava fields."
     },
     {
-      image: "/sivar_moster04.png",
-      title: "Creator: Crypto Dali",
-      description: "Crypto Dali is known for surrealist NFT creations that challenge perceptions and provoke thought. By merging the unpredictable nature of cryptocurrency with the boundless creativity of surrealism, they create pieces that are both visually captivating and intellectually stimulating."
+      image: "/boqueron.png",
+      title: "Boquerón",
+      description: "Boquerón, is a mighty stratovolcano sitting northwest of El Salvador’s capital, San Salvador. At its summit, you'll find El Boquerón, a massive crater stretching 1.5 km across – perfect for those who love dramatic landscapes! While it hasn't erupted recently, this giant is still under watch due to its explosive past. The area is a hit with tourists, offering hiking trails and breathtaking panoramic views of the city and surrounding landscapes."
     }
   ];
 
@@ -75,7 +75,7 @@ export default function NFTClaimLandingPage() {
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/ethvolcano.png"
+              src="/vicente.png"
               alt="Featured NFT"
               width={400}
               height={400}
