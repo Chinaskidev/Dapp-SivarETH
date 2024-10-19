@@ -68,7 +68,13 @@ export default function NFTClaimLandingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-300 via-grey-400 to-orange-400 bg-fixed" 
-     style={{backgroundImage: "url('/backgroeundweb.png')", backgroundBlendMode: "normal"}}>
+    style={{
+      backgroundImage: "url('/backgroeundweb.png')",
+      backgroundBlendMode: "normal",
+      backgroundSize: "auto", // Ajusta el tamaño de la imagen
+      backgroundPosition: "center", // Centra la imagen
+      backgroundRepeat: "repeat" // Evita que la imagen se repita
+    }}>
       <Navbar />
       <main className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Your existing main content here */}
