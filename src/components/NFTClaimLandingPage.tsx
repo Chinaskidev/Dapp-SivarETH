@@ -129,29 +129,36 @@ export default function NFTClaimLandingPage() {
         </section>
 
         <section className="mb-16 relative">
-          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-            <div className="w-full md:w-1/2">
-              <Image
-                src={carouselItems[currentSlide].image}
-                alt={carouselItems[currentSlide].title}
-                width={400}
-                height={300}
-                className="rounded-lg shadow-xl mx-auto"
-              />
-            </div>
-            <div className="w-full md:w-1/2 bg-white/80 backdrop-blur-sm rounded-lg p-6 space-y-4">
-              <h2 className="text-3xl font-semibold">{carouselItems[currentSlide].title}</h2>
-              <p className="text-gray-700">{carouselItems[currentSlide].description}</p>
-            </div>
-          </div>
-          <Button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2">
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-          <Button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2">
-            <ChevronRight className="h-6 w-6" />
-          </Button>
-        </section>
-
+      <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="w-full md:w-1/2 bg-white/80 backdrop-blur-sm rounded-lg p-6 space-y-4 relative z-10">
+          <h2 className="text-3xl font-semibold">{carouselItems[currentSlide].title}</h2>
+          <p className="text-gray-700">{carouselItems[currentSlide].description}</p>
+        </div>
+        <div className="w-full md:w-1/2 relative">
+          <Image
+            src={carouselItems[currentSlide].image}
+            alt={carouselItems[currentSlide].title}
+            width={400}
+            height={300}
+            className="rounded-lg shadow-xl mx-auto"
+          />
+        </div>
+      </div>
+      <Button 
+        onClick={prevSlide} 
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-opacity-50 hover:bg-opacity-75 transition-opacity"
+        style={{ left: '-80px' }}
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </Button>
+      <Button 
+        onClick={nextSlide} 
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-opacity-50 hover:bg-opacity-75 transition-opacity"
+        style={{ right: '-20px' }}
+      >
+        <ChevronRight className="h-6 w-6" />
+      </Button>
+    </section>
         <section>
           <h2 className="text-3xl font-semibold mb-8 text-center">Holder Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
