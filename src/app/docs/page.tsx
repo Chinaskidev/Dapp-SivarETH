@@ -41,9 +41,19 @@ export default function DocsPage() {
           <p className="text-2xl font-medium text-gray-800">
             The SivarETH model seeks to create a cycle of mutual impact: entrepreneurs ("a") are trained in Web3, improve their businesses, and, thanks to NFT sales and donations, funds are generated to help beneficiaries ("b"). These beneficiaries, in addition to receiving financial support, consume products or services from the participating entrepreneurs, which strengthens local economies and generates synergy between both groups. In the long term, both "a" and "b" benefit, not only economically, but also through learning and adopting new technologies.
           </p>
+          <div className="flex justify-center">
+            <Image 
+              src="/ayb.png" 
+              alt="elemento a" 
+              width={600} 
+              height={400} 
+              className="my-4"
+            />
+          </div>
+
           <p className="text-2xl font-medium text-gray-800">
             This approach ensures that Web3 technology is used not only as a means of raising funds, but as an educational tool that empowers all those involved, thus creating an inclusive and sustainable ecosystem.
-          </p>
+          </p> <br /> <br />
         </div>
       </main>
     </div>
