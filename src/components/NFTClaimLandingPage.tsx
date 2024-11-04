@@ -45,7 +45,7 @@ export default function NFTClaimLandingPage() {
       description: "This Blockchain Lighthouse of the Pacific due to its constant activity in the 19th and 20th centuries, this young volcano is located in the Apaneca Range, near Santa Ana Volcano. Although currently inactive, it was once one of the most active volcanoes in Central America, with almost continuous eruptions until 1958. It is famous for its perfectly conical shape and the surrounding lava fields."
     },
     {
-      image: "/boqueron.png",
+      image: "/san_sanl.png",
       title: "Boquerón",
       description: "Boquerón, is a mighty stratovolcano sitting northwest of El Salvador’s capital, San Salvador. At its summit, you'll find El Boquerón, a massive crater stretching 1.5 km across – perfect for those who love dramatic landscapes! While it hasn't erupted recently, this giant is still under watch due to its explosive past. The area is a hit with tourists, offering hiking trails and breathtaking panoramic views of the city and surrounding landscapes."
     }
@@ -81,7 +81,7 @@ export default function NFTClaimLandingPage() {
         <section className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
           <div className="w-full md:w-1/2">
             <Image
-              src="/vicente.png"
+              src="/san_vicen.png"
               alt="Featured NFT"
               width={400}
               height={400}
