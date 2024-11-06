@@ -13,7 +13,7 @@ export default function ContactPage() {
     }}>
       <Navbar />
       <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 space-y-4">
           <p className="text-xl">
             Get in touch with the SivarETH team or follow us on social media:
@@ -30,7 +30,7 @@ export default function ContactPage() {
             {/* Add more social media links as needed */}
           </div>
           <p className="mt-4">
-            For any inquiries, please email us at: <a href="mailto:contact@sivareth.com" className="text-blue-600 hover:underline">contact@sivareth.com</a>
+            For any inquiries, please email us at: <a href="mailto:sivarsmilesv@gmail.com" className="text-blue-600 hover:underline">sivarsmilesv@gmail.com</a>
           </p>
         </div>
       </main>

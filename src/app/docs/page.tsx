@@ -13,16 +13,17 @@ export default function DocsPage() {
     }}>
       <Navbar />
       <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-6">Documentation</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center">About SivarETH</h1>
         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 space-y-4">
-          <h2 className="text-2xl font-semibold">About SivarETH</h2>
+          {/*<h2 className="text-2xl font-semibold">About SivarETH</h2>*/}
+          
           <p className="text-2xl font-medium text-gray-800">
             SivarETH's support entrepreneurs and small foundations to benefit people in need. SivarETH's approach can be described as a collaborative formula: <br />
             a + b = 1, where:
           </p>
-          {/*<p>
+          <p className="text-2xl font-medium text-gray-800">
             "a" represents entrepreneurs and foundations, whom we educate in the Web3 ecosystem, helping them adopt new technologies and strategies to grow and adapt to the digital age.
-          </p>*/}
+          </p>
           <div className="flex justify-center">
             <Image 
               src="/a.png" 
@@ -32,9 +33,9 @@ export default function DocsPage() {
               className="my-4"
             />
           </div>
-          {/*<p>
+          <p className="text-2xl font-medium text-gray-800">
             "b" corresponds to the beneficiaries of these entrepreneurs, who also receive education in Web3, and are given access to products and services offered by 'a'. In turn, "b" can learn to use decentralized tools, such as cryptocurrencies, to improve their quality of life and access essential resources.
-          </p>*/}
+          </p>
           <div className="flex justify-center">
             <Image 
               src="/b.png" 
